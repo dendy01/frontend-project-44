@@ -31,4 +31,21 @@ function isCorrectAnswer(operations, randomValue1, randomValue2, answer, name) {
   }
 }
 
-export { greeting, evenNumberError, isCorrectAnswer };
+function getGreatestCommonDivisor(firstValue, secondValue) {
+  let newFirstValue = firstValue;
+  let newSecondValue = secondValue;
+
+  while (newFirstValue !== 0 && newSecondValue !== 0) {
+    if (newFirstValue > newSecondValue) {
+      newFirstValue %= newSecondValue;
+    } else {
+      newSecondValue %= newFirstValue;
+    }
+  }
+
+  return newFirstValue + newSecondValue;
+}
+
+export {
+  greeting, evenNumberError, isCorrectAnswer, getGreatestCommonDivisor,
+};

@@ -5,5 +5,11 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/38d947893fe21d381632/test_coverage)](https://codeclimate.com/github/dendy01/frontend-project-44/test_coverage)
 
-### Assciinema:
-https://asciinema.org/a/vyiZEAfksorxPcuUQGcm1kDE9
+### Assciinema brain-even:
+https://asciinema.org/a/piR1q7UGHehMTczgCUn0gi0Jd
+
+### Assciinema brain-calc:
+https://asciinema.org/a/X4xJicy0U6wKwNOJfE8XFmelS
+
+### Assciinema brain-gcd:
+https://asciinema.org/a/L86KvccZgMIRERZAGxhfQIWNj
