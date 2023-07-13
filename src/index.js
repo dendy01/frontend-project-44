@@ -46,6 +46,14 @@ function getGreatestCommonDivisor(firstValue, secondValue) {
   return newFirstValue + newSecondValue;
 }
 
+function getRandomValues(arrRandomValues, firstOccurrence, range, subRange) {
+  for (let i = firstOccurrence; i <= 100; i += range) {
+    arrRandomValues.push(i);
+  }
+
+  return arrRandomValues.splice(subRange, 10);
+}
+
 export {
-  greeting, evenNumberError, isCorrectAnswer, getGreatestCommonDivisor,
+  greeting, evenNumberError, isCorrectAnswer, getGreatestCommonDivisor, getRandomValues,
 };
