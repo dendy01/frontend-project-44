@@ -23,7 +23,7 @@ function progression() {
     arrRandomValues = getRandomValues([], firstOccurrence, range, subRange);
     const item = arrRandomValues.splice(randomItem, 1, '..');
 
-    console.log(arrRandomValues.join(' '));
+    console.log(`Question: ${arrRandomValues.join(' ')}`);
 
     const answer = readlineSync.question('Your answer: ');
 
