@@ -28,7 +28,7 @@ function showGreatestCommonDivisor() {
       counter += 1;
     } else {
       console.log(`'${+answer}' is wrong answer ;(. Correct answer was '${maxCommonDivisor}'`);
-      console.log("Let's try again, Sam!");
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }

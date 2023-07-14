@@ -3,17 +3,15 @@ import { greeting, isCorrectAnswer } from '../index.js';
 
 function calculate() {
   const name = greeting();
-
-  console.log(`Hello, ${name}`);
-
-  console.log('What is the result of the expression?');
-
   const operations = ['+', '-', '*'];
   let randomValue1 = 0;
   let randomValue2 = 0;
   let randomIndex = 0;
   let answer = '';
   let counter = 0;
+
+  console.log(`Hello, ${name}`);
+  console.log('What is the result of the expression?');
 
   while (counter < 3) {
     randomValue1 = Math.round(0 - 0.5 + Math.random() * (100 - 0 + 1));
