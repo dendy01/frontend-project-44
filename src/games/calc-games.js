@@ -1,6 +1,10 @@
 import readlineSync from 'readline-sync';
 import { greeting, isCorrectAnswer } from '../index.js';
 
+function random() {
+  return Math.round(0 - 0.5 + Math.random() * (100 - 0 + 1));
+}
+
 function calculate() {
   const name = greeting();
   const operations = ['+', '-', '*'];
@@ -10,12 +14,9 @@ function calculate() {
   let answer = '';
   let counter = 0;
 
-  console.log(`Hello, ${name}`);
-  console.log('What is the result of the expression?');
-
   while (counter < 3) {
-    randomValue1 = Math.round(0 - 0.5 + Math.random() * (100 - 0 + 1));
-    randomValue2 = Math.round(0 - 0.5 + Math.random() * (100 - 0 + 1));
+    randomValue1 = random();
+    randomValue2 = random();
     randomIndex = Math.round(0 - 0.5 + Math.random() * (2 - 0 + 1));
 
     console.log(`Question: ${randomValue1} ${operations[randomIndex]} ${randomValue2}`);

@@ -8,7 +8,6 @@ function primeNumber() {
   let answer = '';
   let text = '';
 
-  console.log(`Hello, ${name}`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   while (counter < 3) {

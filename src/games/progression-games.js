@@ -3,7 +3,6 @@ import { getRandomValues, greeting } from '../index.js';
 
 function progression() {
   const name = greeting();
-
   let arrRandomValues = [];
   let range = 0;
   let subRange = 0;
@@ -11,7 +10,6 @@ function progression() {
   let randomItem = 0;
   let counter = 0;
 
-  console.log(`Hello, ${name}`);
   console.log('What number is missing in the progression?');
 
   while (counter < 3) {

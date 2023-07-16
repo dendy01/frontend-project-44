@@ -6,15 +6,11 @@ function random(min, max) {
 }
 
 function isEven() {
-  const name = greeting();
-
-  console.log(`Hello, ${name}`);
-
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
   let randomValue = 0;
   let counter = 0;
   let answer = '';
+  const name = greeting();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   while (counter < 3) {
     randomValue = random(0, 100);

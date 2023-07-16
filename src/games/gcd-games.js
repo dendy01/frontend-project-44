@@ -2,17 +2,13 @@ import readlineSync from 'readline-sync';
 import { greeting, getGreatestCommonDivisor } from '../index.js';
 
 function showGreatestCommonDivisor() {
-  const name = greeting();
-
-  console.log(`Hello, ${name}`);
-
-  console.log('Find the greatest common divisor of given numbers.');
-
   let firstValue = 1;
   let secondValue = 1;
   let answer = '';
   let maxCommonDivisor = 0;
   let counter = 0;
+  const name = greeting();
+  console.log('Find the greatest common divisor of given numbers.');
 
   while (counter < 3) {
     firstValue = Math.round(1 - 0.5 + Math.random() * (100 - 1 + 1));
