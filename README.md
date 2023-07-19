@@ -3,17 +3,16 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/38d947893fe21d381632/maintainability)](https://codeclimate.com/github/dendy01/frontend-project-44/maintainability)
 
-### Asciinema brain-even:
-https://asciinema.org/a/piR1q7UGHehMTczgCUn0gi0Jd
+## Description:
+Math Games
 
-### Asciinema brain-calc:
-https://asciinema.org/a/X4xJicy0U6wKwNOJfE8XFmelS
+## Requirements:
+install Node.js - v12.22.9
 
-### Asciinema brain-gcd:
-https://asciinema.org/a/L86KvccZgMIRERZAGxhfQIWNj
+## Install
 
-### Assciinemf brain-progression:
-https://asciinema.org/a/ThyEjZYXwUSdcu512FvAIeaLZ
+### Clone
+git clone https://github.com/dendy01/frontend-project-44.git
 
-### Asciinema brain-prime: 
-https://asciinema.org/a/tbUvI4aTMHmfTEiQhyFH9qA5O
+### Asciinema:
+https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC
