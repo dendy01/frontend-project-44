@@ -21,13 +21,13 @@ git clone https://github.com/dendy01/frontend-project-44.git
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     asdf install nodejs latest
 
-Using the package manager
-  MacOS users who have Homebrew installed can install Node.js with the command:
+### Using the package manager
+### MacOS users who have Homebrew installed can install Node.js with the command:
     brew install node
 
-  Ubuntu users can install Node.js with the command:
+### Ubuntu users can install Node.js with the command:
     curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
     sudo apt-get install -y nodejs
 
-### Asciinema:
+## Asciinema:
 https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC
