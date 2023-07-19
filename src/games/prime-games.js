@@ -1,34 +1,28 @@
-import readlineSync from 'readline-sync';
-import { greeting, isPrime } from '../index.js';
+import startGame from '../index.js';
+import random from '../utils.js';
 
-function primeNumber() {
-  const name = greeting();
-  let randomValue = 0;
-  let counter = 0;
-  let answer = '';
-  let text = '';
+const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
 
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
-  while (counter < 3) {
-    randomValue = Math.floor(1 + Math.random() * (20 + 1 - 1));
-
-    console.log(`Question: ${randomValue}`);
-
-    answer = readlineSync.question('Your answer: ');
-    text = isPrime(randomValue) ? 'yes' : 'no';
-
-    if (answer === text) {
-      console.log('Correct!');
-      counter += 1;
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${text}'`);
-      console.log(`Let's try again, ${name}!`);
-      return;
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
+      return false;
     }
   }
 
-  console.log(`Congratulations, ${name}!`);
-}
+  return true;
+};
 
-export default primeNumber;
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const runPrime = () => {
+  const randomValue = random(1, 20);
+  const question = randomValue;
+  const answer = isPrime(randomValue) ? 'yes' : 'no';
+
+  return [question, answer];
+};
+
+export default () => startGame(description, runPrime);

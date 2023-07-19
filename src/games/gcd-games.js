@@ -1,35 +1,30 @@
-import readlineSync from 'readline-sync';
-import { greeting, getGreatestCommonDivisor } from '../index.js';
+import startGame from '../index.js';
+import random from '../utils.js';
 
-function showGreatestCommonDivisor() {
-  let firstValue = 1;
-  let secondValue = 1;
-  let answer = '';
-  let maxCommonDivisor = 0;
-  let counter = 0;
-  const name = greeting();
-  console.log('Find the greatest common divisor of given numbers.');
+const getGreatestCommonDivisor = (firstValue, secondValue) => {
+  let newFirstValue = firstValue;
+  let newSecondValue = secondValue;
 
-  while (counter < 3) {
-    firstValue = Math.round(1 - 0.5 + Math.random() * (100 - 1 + 1));
-    secondValue = Math.round(1 - 0.5 + Math.random() * (100 - 1 + 1));
-
-    console.log(`Question: ${firstValue} ${secondValue}`);
-
-    answer = readlineSync.question('Your answer: ');
-    maxCommonDivisor = getGreatestCommonDivisor(firstValue, secondValue);
-
-    if (+answer === maxCommonDivisor) {
-      console.log('Correct!');
-      counter += 1;
+  while (newFirstValue !== 0 && newSecondValue !== 0) {
+    if (newFirstValue > newSecondValue) {
+      newFirstValue %= newSecondValue;
     } else {
-      console.log(`'${+answer}' is wrong answer ;(. Correct answer was '${maxCommonDivisor}'`);
-      console.log(`Let's try again, ${name}!`);
-      return;
+      newSecondValue %= newFirstValue;
     }
   }
 
-  console.log(`Congratulations, ${name}!`);
-}
+  return newFirstValue + newSecondValue;
+};
 
-export default showGreatestCommonDivisor;
+const description = 'Find the greatest common divisor of given numbers.';
+
+const runGreatestCommonDivisor = () => {
+  const firstValue = random(1, 100);
+  const secondValue = random(1, 100);
+  const answer = String(getGreatestCommonDivisor(firstValue, secondValue));
+  const question = `Question: ${firstValue} ${secondValue}`;
+
+  return [question, answer];
+};
+
+export default () => startGame(description, runGreatestCommonDivisor);
