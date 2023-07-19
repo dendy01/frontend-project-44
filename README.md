@@ -14,10 +14,10 @@ Node.js - v12.22.9
 ### Clone
 git clone https://github.com/dendy01/frontend-project-44.git
 
-### Install node.js
-Using version manager (recommended)
-  1.Install the asdf version manager. We wrote about how to do this in the guide "What is the "Version Manager""
-  2.Run the commands:
+## Install node.js
+### Using version manager (recommended)
+### 1.Install the asdf version manager. We wrote about how to do this in the guide "What is the "Version Manager""
+### 2.Run the commands:
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     asdf install nodejs latest
 
