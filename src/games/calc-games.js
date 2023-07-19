@@ -19,6 +19,7 @@ function calculate() {
     randomValue2 = random(0, 100);
     randomIndex = random(0, 2);
 
+    console.log('What is the result of the expression?');
     console.log(`Question: ${randomValue1} ${operations[randomIndex]} ${randomValue2}`);
 
     answer = readlineSync.question('Your answer: ');
