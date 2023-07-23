@@ -19,4 +19,4 @@ make install
 npm link
 
 ## Asciinema:
-![Asciinema](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC)
+[Asciinema](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC)
