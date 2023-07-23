@@ -16,7 +16,8 @@ git clone https://github.com/dendy01/frontend-project-44.git
 
 ### Setup
 make install
+***
 npm link
 
 ## Asciinema:
-[Asciinema](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC)
+<script async id="asciicast-F4dSpGEaYLqTqQbjXl8eF4qYC" src="https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC.js"></script>
