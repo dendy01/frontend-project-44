@@ -20,4 +20,4 @@ make install
 npm link
 
 ## Asciinema:
-<script async id="asciicast-F4dSpGEaYLqTqQbjXl8eF4qYC" src="https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC.js"></script>
+[![asciicast](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC.svg)](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC)
