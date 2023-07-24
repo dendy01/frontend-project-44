@@ -4,7 +4,7 @@ import { generateRandomValue, getRandomIndex } from '../utils.js';
 const description = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
-const correctAnswer = (value1, value2, operation) => {
+const generateCorrectAnswer = (value1, value2, operation) => {
   switch (operation) {
     case '+':
       return String(value1 + value2);
@@ -22,9 +22,9 @@ const generateRaund = () => {
   const randomValue2 = generateRandomValue(0, 100);
   const operation = getRandomIndex(operations);
   const question = `${randomValue1} ${operation} ${randomValue2}`;
-  const answer = correctAnswer(randomValue1, randomValue2, operation);
+  const correctAnswer = generateCorrectAnswer(randomValue1, randomValue2, operation);
 
-  return [question, answer];
+  return [question, correctAnswer];
 };
 
 export default () => startGames(description, generateRaund);
