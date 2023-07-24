@@ -1,25 +1,30 @@
-import startGame from '../index.js';
-import random from '../utils.js';
+import startGames from '../index.js';
+import { generateRandomValue, getRandomIndex } from '../utils.js';
 
 const description = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
 
-const runCalc = () => {
-  const operations = ['+', '-', '*'];
-  const randomValue1 = random(0, 100);
-  const randomValue2 = random(0, 100);
-  const randomIndex = random(0, 2);
-  const question = `${randomValue1} ${operations[randomIndex]} ${randomValue2}`;
-  let answer = '';
-
-  if (operations[randomIndex] === '+') {
-    answer = String(randomValue1 + randomValue2);
-  } else if (operations[randomIndex] === '-') {
-    answer = String(randomValue1 - randomValue2);
-  } else if (operations[randomIndex] === '*') {
-    answer = String(randomValue1 * randomValue2);
+const correctAnswer = (value1, value2, operation) => {
+  switch (operation) {
+    case '+':
+      return String(value1 + value2);
+    case '-':
+      return String(value1 - value2);
+    case '*':
+      return String(value1 * value2);
+    default:
+      throw new Error('Invalid operator!');
   }
+};
+
+const generateRaund = () => {
+  const randomValue1 = generateRandomValue(0, 100);
+  const randomValue2 = generateRandomValue(0, 100);
+  const operation = getRandomIndex(operations);
+  const question = `${randomValue1} ${operation} ${randomValue2}`;
+  const answer = correctAnswer(randomValue1, randomValue2, operation);
 
   return [question, answer];
 };
 
-export default () => startGame(description, runCalc);
+export default () => startGames(description, generateRaund);
