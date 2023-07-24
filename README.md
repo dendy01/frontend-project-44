@@ -16,7 +16,7 @@ git clone https://github.com/dendy01/frontend-project-44.git
 
 ### Setup
 make install
-***
+---
 npm link
 
 ## Asciinema:
