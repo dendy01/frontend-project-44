@@ -16,8 +16,10 @@ git clone https://github.com/dendy01/frontend-project-44.git
 
 ### Setup
 make install
----
+
 npm link
+
+npm ci
 
 ## Asciinema:
 [![asciicast](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC.svg)](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC)
