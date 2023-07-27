@@ -18,11 +18,11 @@ const calculateExpectedResponse = (value1, value2, operation) => {
 };
 
 const generateRaund = () => {
-  const randomValue1 = getRandomValue(0, 100);
-  const randomValue2 = getRandomValue(0, 100);
+  const firstRandomValue = getRandomValue(0, 100);
+  const secondRandomValue = getRandomValue(0, 100);
   const operation = getRandomIndex(operations);
-  const question = `${randomValue1} ${operation} ${randomValue2}`;
-  const correctAnswer = calculateExpectedResponse(randomValue1, randomValue2, operation);
+  const question = `${firstRandomValue} ${operation} ${secondRandomValue}`;
+  const correctAnswer = calculateExpectedResponse(firstRandomValue, secondRandomValue, operation);
 
   return [question, correctAnswer];
 };
