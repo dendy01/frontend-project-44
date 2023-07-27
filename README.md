@@ -15,7 +15,7 @@ Node.js - v13.2.0
 git clone https://github.com/dendy01/frontend-project-44.git
 
 ### Setup
-`make install`
+`make install`<br>
 `npm link`
 
 ## Asciinema brain-calc:
