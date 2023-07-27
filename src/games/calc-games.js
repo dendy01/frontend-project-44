@@ -13,7 +13,7 @@ const calculateExpectedResponse = (value1, value2, operation) => {
     case '*':
       return String(value1 * value2);
     default:
-      throw new Error('Invalid operator!');
+      throw new Error(`Invalid operator! ${operation} - данного оператора не существует!`);
   }
 };
 
