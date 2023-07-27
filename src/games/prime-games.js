@@ -1,5 +1,5 @@
 import startGames from '../index.js';
-import { generateRandomValue } from '../utils.js';
+import { getRandomValue } from '../utils.js';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -18,7 +18,7 @@ const isPrime = (num) => {
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateRaund = () => {
-  const randomValue = generateRandomValue(1, 20);
+  const randomValue = getRandomValue(1, 20);
   const question = randomValue;
   const answer = isPrime(randomValue) ? 'yes' : 'no';
 

@@ -1,5 +1,5 @@
 import startGames from '../index.js';
-import { generateRandomValue } from '../utils.js';
+import { getRandomValue } from '../utils.js';
 
 function getRandomValues(arrRandomValues, firstOccurrence, range, subRange) {
   for (let i = firstOccurrence; i <= 100; i += range) {
@@ -12,10 +12,10 @@ function getRandomValues(arrRandomValues, firstOccurrence, range, subRange) {
 const description = 'What number is missing in the progression?';
 
 const generateRaund = () => {
-  const range = generateRandomValue(2, 5);
-  const subRange = generateRandomValue(0, 3);
-  const firstOccurrence = generateRandomValue(1, 5);
-  const randomItem = generateRandomValue(0, 9);
+  const range = getRandomValue(2, 5);
+  const subRange = getRandomValue(0, 3);
+  const firstOccurrence = getRandomValue(1, 5);
+  const randomItem = getRandomValue(0, 9);
   const arrRandomValues = getRandomValues([], firstOccurrence, range, subRange);
   const answer = String(arrRandomValues.splice(randomItem, 1, '..'));
   const question = `Question: ${arrRandomValues.join(' ')}`;
