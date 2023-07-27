@@ -21,5 +21,17 @@ npm link
 
 npm ci
 
-## Asciinema:
-[![asciicast](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC.svg)](https://asciinema.org/a/F4dSpGEaYLqTqQbjXl8eF4qYC)
+## Asciinema brain-calc:
+[![asciicast](https://asciinema.org/a/599455.svg)](https://asciinema.org/a/599455)
+
+## Asciinema brain-even:
+[![asciicast](https://asciinema.org/a/599456.svg)](https://asciinema.org/a/599456)
+
+## Asciinema brain-gcd:
+[![asciicast](https://asciinema.org/a/599457.svg)](https://asciinema.org/a/599457)
+
+## Asciinema brain-prime:
+[![asciicast](https://asciinema.org/a/599459.svg)](https://asciinema.org/a/599459)
+
+## Asciinema brain-progression:
+[![asciicast](https://asciinema.org/a/599460.svg)](https://asciinema.org/a/599460)
