@@ -1,4 +1,4 @@
-import startGames from '../index.js';
+import run from '../index.js';
 import { getRandomValue } from '../utils.js';
 
 function getRandomValues(arrRandomValues, firstOccurrence, range, subRange) {
@@ -11,7 +11,7 @@ function getRandomValues(arrRandomValues, firstOccurrence, range, subRange) {
 
 const description = 'What number is missing in the progression?';
 
-const generateRaund = () => {
+const generateRound = () => {
   const range = getRandomValue(2, 5);
   const subRange = getRandomValue(0, 3);
   const firstOccurrence = getRandomValue(1, 5);
@@ -23,4 +23,4 @@ const generateRaund = () => {
   return [question, answer];
 };
 
-export default () => startGames(description, generateRaund);
+export default () => run(description, generateRound);

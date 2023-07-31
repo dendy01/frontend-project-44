@@ -1,4 +1,4 @@
-import startGames from '../index.js';
+import run from '../index.js';
 import { getRandomValue } from '../utils.js';
 
 const isPrime = (num) => {
@@ -17,7 +17,7 @@ const isPrime = (num) => {
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generateRaund = () => {
+const generateRound = () => {
   const randomValue = getRandomValue(1, 20);
   const question = randomValue;
   const answer = isPrime(randomValue) ? 'yes' : 'no';
@@ -25,4 +25,4 @@ const generateRaund = () => {
   return [question, answer];
 };
 
-export default () => startGames(description, generateRaund);
+export default () => run(description, generateRound);
