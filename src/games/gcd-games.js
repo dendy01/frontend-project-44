@@ -1,6 +1,8 @@
 import run from '../index.js';
 import { getRandomValue } from '../utils.js';
 
+const description = 'Find the greatest common divisor of given numbers.';
+
 const getGreatestCommonDivisor = (value1, value2) => {
   let result = 0;
 
@@ -14,8 +16,6 @@ const getGreatestCommonDivisor = (value1, value2) => {
 
   return result + value2;
 };
-
-const description = 'Find the greatest common divisor of given numbers.';
 
 const generateRound = () => {
   const value1 = getRandomValue(1, 100);
