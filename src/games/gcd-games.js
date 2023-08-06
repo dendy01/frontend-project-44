@@ -18,10 +18,10 @@ const getGreatestCommonDivisor = (value1, value2) => {
 };
 
 const generateRound = () => {
-  const value1 = getRandomValue(1, 100);
-  const value2 = getRandomValue(1, 100);
-  const answer = String(getGreatestCommonDivisor(value1, value2));
-  const question = `${value1} ${value2}`;
+  const number1 = getRandomValue(1, 100);
+  const number2 = getRandomValue(1, 100);
+  const answer = String(getGreatestCommonDivisor(number1, number2));
+  const question = `${number1} ${number2}`;
 
   return [question, answer];
 };
