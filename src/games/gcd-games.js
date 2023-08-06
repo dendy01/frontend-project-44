@@ -21,7 +21,7 @@ const generateRound = () => {
   const value1 = getRandomValue(1, 100);
   const value2 = getRandomValue(1, 100);
   const answer = String(getGreatestCommonDivisor(value1, value2));
-  const question =  `Question: ${value1} ${value2}`;
+  const question = `Question: ${value1} ${value2}`;
 
   return [question, answer];
 };
