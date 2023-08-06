@@ -7,7 +7,7 @@ const isEven = (value) => (value % 2 === 0 ? 'yes' : 'no');
 
 const generateRound = () => {
   const value = getRandomValue(0, 100);
-  const question = `Question: ${value}`;
+  const question = value;
   const answer = isEven(value);
 
   return [question, answer];
