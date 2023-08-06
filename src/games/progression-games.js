@@ -1,15 +1,15 @@
 import run from '../index.js';
 import { getRandomValue } from '../utils.js';
 
-function getRandomValues(arrRandomValues, firstOccurrence, range, subRange) {
+const description = 'What number is missing in the progression?';
+
+function getRandomValues(array, firstOccurrence, range, subRange) {
   for (let i = firstOccurrence; i <= 100; i += range) {
-    arrRandomValues.push(i);
+    array.push(i);
   }
 
-  return arrRandomValues.splice(subRange, 10);
+  return array.splice(subRange, 10);
 }
-
-const description = 'What number is missing in the progression?';
 
 const generateRound = () => {
   const range = getRandomValue(2, 5);
@@ -18,7 +18,7 @@ const generateRound = () => {
   const randomItem = getRandomValue(0, 9);
   const arrRandomValues = getRandomValues([], firstOccurrence, range, subRange);
   const answer = String(arrRandomValues.splice(randomItem, 1, '..'));
-  const question = `Question: ${arrRandomValues.join(' ')}`;
+  const question = `${arrRandomValues.join(' ')}`;
 
   return [question, answer];
 };

@@ -1,28 +1,27 @@
 import run from '../index.js';
 import { getRandomValue } from '../utils.js';
 
-const getGreatestCommonDivisor = (firstValue, secondValue) => {
-  let newFirstValue = firstValue;
-  let newSecondValue = secondValue;
+const getGreatestCommonDivisor = (value1, value2) => {
+  let result = 0;
 
-  while (newFirstValue !== 0 && newSecondValue !== 0) {
-    if (newFirstValue > newSecondValue) {
-      newFirstValue %= newSecondValue;
+  while (value1 !== 0 && value2 !== 0) {
+    if (value1 > value2) {
+      result %= value2;
     } else {
-      newSecondValue %= newFirstValue;
+      result %= value2;
     }
   }
 
-  return newFirstValue + newSecondValue;
+  return result + value2;
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
 
 const generateRound = () => {
-  const firstValue = getRandomValue(1, 100);
-  const secondValue = getRandomValue(1, 100);
-  const answer = String(getGreatestCommonDivisor(firstValue, secondValue));
-  const question = `Question: ${firstValue} ${secondValue}`;
+  const value1 = getRandomValue(1, 100);
+  const value2 = getRandomValue(1, 100);
+  const answer = String(getGreatestCommonDivisor(value1, value2));
+  const question = `Question: ${value1} ${value2}`;
 
   return [question, answer];
 };

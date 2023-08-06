@@ -18,9 +18,9 @@ const isPrime = (num) => {
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateRound = () => {
-  const randomValue = getRandomValue(1, 20);
-  const question = randomValue;
-  const answer = isPrime(randomValue) ? 'yes' : 'no';
+  const value = getRandomValue(1, 20);
+  const question = value;
+  const answer = isPrime(value) ? 'yes' : 'no';
 
   return [question, answer];
 };
