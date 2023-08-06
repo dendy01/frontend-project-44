@@ -11,10 +11,6 @@ const run = (description, generateRound) => {
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = generateRound();
 
-    if(Array.isArray(question)) {
-      console.log(`Question: ${question[0]} ${question[1]}`);
-    }
-
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
