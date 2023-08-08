@@ -20,9 +20,9 @@ const isPrime = (num) => {
 const generateRound = () => {
   const value = getRandomValue(1, 20);
   const question = value;
-  const answer = isPrime(value) ? 'yes' : 'no';
+  const correctAnswer = isPrime(value) ? 'yes' : 'no';
 
-  return [question, answer];
+  return [question, correctAnswer];
 };
 
 export default () => run(description, generateRound);

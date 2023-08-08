@@ -3,24 +3,27 @@ import { getRandomValue } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-function getRandomValues(array, firstOccurrence, range, subRange) {
-  for (let i = firstOccurrence; i <= 100; i += range) {
-    array.push(i);
+const generateProgression = (first, step, length) => {
+  const array = [];
+
+  for (let i = 0; i < length; i += 1) {
+    const result = (first + (step * i));
+    array.push(result);
   }
 
-  return array.splice(subRange, 10);
-}
+  return array;
+};
 
 const generateRound = () => {
-  const range = getRandomValue(2, 5);
-  const subRange = getRandomValue(0, 3);
-  const firstOccurrence = getRandomValue(1, 5);
+  const first = getRandomValue(1, 10);
+  const step = getRandomValue(1, 10);
+  const length = getRandomValue(10, 10);
   const randomItem = getRandomValue(0, 9);
-  const arrRandomValues = getRandomValues([], firstOccurrence, range, subRange);
-  const answer = String(arrRandomValues.splice(randomItem, 1, '..'));
-  const question = `${arrRandomValues.join(' ')}`;
+  const progression = generateProgression(first, step, length);
+  const correctAnswer = String(progression.splice(randomItem, 1, '..'));
+  const question = progression.join(' ');
 
-  return [question, answer];
+  return [question, correctAnswer];
 };
 
 export default () => run(description, generateRound);

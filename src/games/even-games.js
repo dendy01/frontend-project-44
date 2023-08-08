@@ -8,9 +8,9 @@ const isEven = (value) => (value % 2 === 0 ? 'yes' : 'no');
 const generateRound = () => {
   const value = getRandomValue(0, 100);
   const question = value;
-  const answer = isEven(value);
+  const correctAnswer = isEven(value);
 
-  return [question, answer];
+  return [question, correctAnswer];
 };
 
 export default () => run(description, generateRound);
