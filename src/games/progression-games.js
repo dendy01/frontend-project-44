@@ -19,6 +19,7 @@ const generateRound = () => {
   const step = getRandomValue(1, 10);
   const length = getRandomValue(10, 10);
   const randomItem = getRandomValue(0, 9);
+
   const progression = generateProgression(first, step, length);
   const correctAnswer = String(progression.splice(randomItem, 1, '..'));
   const question = progression.join(' ');
